@@ -36,7 +36,15 @@ struct LairView: View {
                       title: "Evil Music",
                       image: Image(systemName: "music.house"))
                 ])
+                ProgressBarView(
+                         title: "Death Ray Charge",
+                         percent: .constant(0.42)).frame(height: 50)
+                       ProgressBarView(
+                         title: "Weather Machine Construction",
+                         percent: .constant(0.86)).frame(height: 50)
             }
+        .navigationBarTitle(Text("Lair Change"))
+        .navigationBarItems(trailing: profileView)
         }
     }
 }

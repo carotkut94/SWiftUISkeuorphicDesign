@@ -16,6 +16,12 @@
 		E1C09AD724208C1A0047DC2D /* LairView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C09AD624208C1A0047DC2D /* LairView.swift */; };
 		E1C09AD924208CE20047DC2D /* AccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C09AD824208CE20047DC2D /* AccessoryView.swift */; };
 		E1C09ADB24208D340047DC2D /* AccessoryRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C09ADA24208D340047DC2D /* AccessoryRowView.swift */; };
+		E1C09ADD24208EE20047DC2D /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C09ADC24208EE20047DC2D /* ProgressBarView.swift */; };
+		E1C09ADF242091B70047DC2D /* TabBarItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C09ADE242091B70047DC2D /* TabBarItemView.swift */; };
+		E1C09AE1242091D30047DC2D /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C09AE0242091D30047DC2D /* TabBarView.swift */; };
+		E1C09AE6242093030047DC2D /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C09AE3242093030047DC2D /* UIColorExtension.swift */; };
+		E1C09AE7242093030047DC2D /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C09AE4242093030047DC2D /* ColorExtension.swift */; };
+		E1C09AE8242093030047DC2D /* LinearGradientExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C09AE5242093030047DC2D /* LinearGradientExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +36,12 @@
 		E1C09AD624208C1A0047DC2D /* LairView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LairView.swift; sourceTree = "<group>"; };
 		E1C09AD824208CE20047DC2D /* AccessoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoryView.swift; sourceTree = "<group>"; };
 		E1C09ADA24208D340047DC2D /* AccessoryRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoryRowView.swift; sourceTree = "<group>"; };
+		E1C09ADC24208EE20047DC2D /* ProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
+		E1C09ADE242091B70047DC2D /* TabBarItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItemView.swift; sourceTree = "<group>"; };
+		E1C09AE0242091D30047DC2D /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		E1C09AE3242093030047DC2D /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		E1C09AE4242093030047DC2D /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		E1C09AE5242093030047DC2D /* LinearGradientExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinearGradientExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +74,7 @@
 		E1C09AC024208A0F0047DC2D /* NeuMorphism */ = {
 			isa = PBXGroup;
 			children = (
+				E1C09AE2242093030047DC2D /* Extensions */,
 				E1C09AD524208B2F0047DC2D /* Views */,
 				E1C09AC124208A0F0047DC2D /* AppDelegate.swift */,
 				E1C09AC324208A0F0047DC2D /* SceneDelegate.swift */,
@@ -88,8 +101,21 @@
 				E1C09AD624208C1A0047DC2D /* LairView.swift */,
 				E1C09AD824208CE20047DC2D /* AccessoryView.swift */,
 				E1C09ADA24208D340047DC2D /* AccessoryRowView.swift */,
+				E1C09ADC24208EE20047DC2D /* ProgressBarView.swift */,
+				E1C09ADE242091B70047DC2D /* TabBarItemView.swift */,
+				E1C09AE0242091D30047DC2D /* TabBarView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		E1C09AE2242093030047DC2D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E1C09AE3242093030047DC2D /* UIColorExtension.swift */,
+				E1C09AE4242093030047DC2D /* ColorExtension.swift */,
+				E1C09AE5242093030047DC2D /* LinearGradientExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,11 +190,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1C09AD724208C1A0047DC2D /* LairView.swift in Sources */,
+				E1C09AE1242091D30047DC2D /* TabBarView.swift in Sources */,
+				E1C09AE8242093030047DC2D /* LinearGradientExtension.swift in Sources */,
 				E1C09AD924208CE20047DC2D /* AccessoryView.swift in Sources */,
 				E1C09AC224208A0F0047DC2D /* AppDelegate.swift in Sources */,
 				E1C09AC424208A0F0047DC2D /* SceneDelegate.swift in Sources */,
 				E1C09ADB24208D340047DC2D /* AccessoryRowView.swift in Sources */,
+				E1C09ADF242091B70047DC2D /* TabBarItemView.swift in Sources */,
+				E1C09AE6242093030047DC2D /* UIColorExtension.swift in Sources */,
 				E1C09AC624208A0F0047DC2D /* ContentView.swift in Sources */,
+				E1C09AE7242093030047DC2D /* ColorExtension.swift in Sources */,
+				E1C09ADD24208EE20047DC2D /* ProgressBarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
