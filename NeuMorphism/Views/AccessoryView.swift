@@ -15,13 +15,17 @@ struct AccessoryView: View {
   
   var body: some View {
     VStack {
-      image.resizable().scaledToFit()
+      LinearGradient.lairHorizontalDark
+      .mask(image.resizable().scaledToFit()).scaledToFit()
         .frame(width: 150, height: 236)
         .padding(40)
         .font(.system(size: 150, weight: .thin))
+        .shadow(color: .white, radius: 2, x:-3, y:-3)
+        .shadow(color: .lairShadowGray, radius: 2, x:3, y:3)
       
       HStack {
         Text(title)
+          .foregroundColor(.lairDarkGray)
           .bold()
           .padding(.leading)
           .padding(.bottom)
@@ -29,7 +33,22 @@ struct AccessoryView: View {
       }
     }
     .frame(width: 230)
-    .border(Color.gray, width: 1)
+    .overlay(
+      RoundedRectangle(cornerRadius: 15)
+        .stroke(LinearGradient.lairDiagonalDarkBorder, lineWidth: 2)
+    )
+    .background(Color.lairBackgroundGray)
+    .cornerRadius(15)
+    .shadow(
+      color: Color(white: 1.0).opacity(0.9),
+      radius: 18,
+      x: -18,
+      y: -18)
+    .shadow(
+      color: Color.lairShadowGray.opacity(0.5),
+      radius: 14,
+      x: 14,
+      y: 14)
   }
 }
 

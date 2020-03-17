@@ -23,35 +23,38 @@ struct ContentView: View {
   
   var body: some View {
     GeometryReader { geometry in
-      VStack(spacing: 0) {
         ZStack {
-            LairView()
+            Color.lairBackgroundGray.edgesIgnoringSafeArea(.all)
+            VStack(spacing: 0) {
+            ZStack {
+                LairView()
+            }
+            
+            Rectangle()
+              .frame(height: 1.0 / UIScreen.main.scale)
+              .foregroundColor(Color(white: 0.698))
+            
+            TabBarView(
+              selectedItem: self.$selectedItem,
+              tabBarItems: [
+                TabBarItemView(
+                  selectedItem: self.$selectedItem,
+                  smartView: .lair, icon: "pencil.tip"),
+                TabBarItemView(
+                  selectedItem: self.$selectedItem,
+                  smartView: .camera, icon: "video.circle"),
+                TabBarItemView(
+                  selectedItem: self.$selectedItem,
+                  smartView: .automation, icon: "alarm"),
+                TabBarItemView(
+                  selectedItem: self.$selectedItem,
+                  smartView: .settings, icon: "gear")
+            ])
+              .padding(.bottom, geometry.safeAreaInsets.bottom)
+              .background(Color(white: 0.96875))
+          }
+            .edgesIgnoringSafeArea(.bottom)
         }
-        
-        Rectangle()
-          .frame(height: 1.0 / UIScreen.main.scale)
-          .foregroundColor(Color(white: 0.698))
-        
-        TabBarView(
-          selectedItem: self.$selectedItem,
-          tabBarItems: [
-            TabBarItemView(
-              selectedItem: self.$selectedItem,
-              smartView: .lair, icon: "pencil.tip"),
-            TabBarItemView(
-              selectedItem: self.$selectedItem,
-              smartView: .camera, icon: "video.circle"),
-            TabBarItemView(
-              selectedItem: self.$selectedItem,
-              smartView: .automation, icon: "alarm"),
-            TabBarItemView(
-              selectedItem: self.$selectedItem,
-              smartView: .settings, icon: "gear")
-        ])
-          .padding(.bottom, geometry.safeAreaInsets.bottom)
-          .background(Color(white: 0.96875))
-      }
-      .edgesIgnoringSafeArea(.bottom)
     }
   }
 }

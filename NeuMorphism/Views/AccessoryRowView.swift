@@ -18,6 +18,8 @@ struct AccessoryRowView: View {
           accessory.padding(.horizontal, 30)
         }
       }
+        .padding(.top, 32)
+        .padding(.bottom, 38)
     }
   }
 }
