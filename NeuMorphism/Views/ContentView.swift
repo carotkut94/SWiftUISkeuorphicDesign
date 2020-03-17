@@ -6,11 +6,30 @@
 //  Copyright © 2020 Death Code. All rights reserved.
 //
 
+
+//Entry point
+
 import SwiftUI
+
+enum SmartView {
+  case lair
+  case camera
+  case automation
+  case settings
+}
+
+
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+        GeometryReader{ geometry in
+            VStack(spacing: 0){
+                ZStack{
+                    LairView()
+                }
+            }
+            
+        }
     }
 }
 
